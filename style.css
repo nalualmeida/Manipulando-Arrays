@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+:root{
+    --fonte-principal: 'Roboto Slab'
+}
+
+body{
+    background-color: rgb(255, 202, 152);
+    font-family: var(--fonte-principal);
+    color: rgb(80, 49, 20);
+}
+
+header{
+    text-align: center;
+}
+
+.container{
+    width: 570px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "esquerda direita";
+    column-gap: 40px;
+    padding: 20px;
+    background-color: rgb(255, 175, 95);
+    border: 5px solid antiquewhite;
+}
+
+h2{
+    grid-area: titulo;
+    border-bottom: 2px solid antiquewhite;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+.esquerda{
+    grid-area: esquerda;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addNumero{
+    display: flex;
+    gap: 3px;
+}
+
+button#botaoAdd{
+    font-size: 70%;
+    width: 80px;
+    text-align: center; 
+    border: 2px solid antiquewhite;
+}
+
+.visor{
+    border: 3px solid antiquewhite;
+    border-radius: 15px;
+    background-color: rgb(146, 95, 48);
+    width: 220px;
+    height: 160px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    overflow: auto;
+    color: white;
+    text-align: center;
+    font-size: smaller;
+}
+
+button#botaoCalcular{
+    width: 220px;
+    border: 3px solid antiquewhite;
+}
+
+button{
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    color: antiquewhite;
+    background-color: rgb(80, 49, 20);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(27, 14, 1);   
+}
+
+.direita{
+    grid-area: direita;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.qtd{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.porcentagem h3{
+    border-bottom: 3px solid antiquewhite;
+    padding-bottom: 2px;
+    width: 238px;
+}
+
+.porcentoPar{
+    margin-bottom: 5px;
+}
+
+label{
+    font-weight: bolder;
+}
+
+input{
+    background-color: antiquewhite;
+    border: 1px solid rgb(80, 49, 20);
+    border-radius: 3px;
+    color: black;
+    font-weight: bold;
+}
+
+input#numero, .porcentagem input{
+    width: 80px;
+}
+
+.qtd input{
+    width: 40px;
+}
+
+footer{
+    text-align: center;
+    font-weight: bold;
+}
